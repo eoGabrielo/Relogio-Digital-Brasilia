@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Poppins";
+    color: rgb(255, 255, 255);
+
+}
+
+body {
+    padding: 3rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Hora, minuto, segundo e dois pontos*/
+#hours,
+#minute,
+#seconds,
+#dot {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+/*Titulo Brasilia Time*/
+.nameHours {
+    font-size: 4rem;
+    margin: 0;
+}
+
+/*Caixa que contem hora, minuto, segundo e dois pontos*/
+.boxHours {
+    margin: 0;
+}
+
+/*Todo conteudo*/
+main {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.575);
+    border-radius: 25px;
+    width: 650px;
+    min-width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 8px 50px 1px #000000;
+}
+
+/*Imagem de fundo*/
+#imgBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover; /*Evita distorcer imagem*/
+}
+
+@media (max-width: 768px) {
+
+    /*Hora, minuto, segundo e dois pontos*/
+    #hours,
+    #minute,
+    #seconds,
+    #dot {
+        font-size: 3rem;
+    }
+
+    /*Titulo Brasilia Time*/
+    .nameHours {
+        font-size: 3rem;
+    }
+
+    main {
+        width: 450px;
+        height: 200px;
+        
+    }
+
+    main p{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*Hora, minuto, segundo e dois pontos*/
+    #hours,
+    #minute,
+    #seconds,
+    #dot {
+        font-size: 3rem;
+    }
+
+    /*Titulo Brasilia Time*/
+    .nameHours {
+        font-size: 2rem;
+    }
+
+    main {
+        width: 330px;
+        height: 150px;
+
+        
+    }
+
+    main p{
+        font-size: 0.85rem;
+    }
+}
