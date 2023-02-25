@@ -3,7 +3,7 @@
 
 <p>No codigo do projeto foi usado uma função nativa do JavaScript que execulta algo em tempo em tempo, sabendo disso usei essa função para pegar uma nova data e pegar as horas dela, depois de ter o codigo atualizando a cada um segundo, foi atribuido as horas, minutos e secundos para cada variavel, tendo as horas atualizadas a cada atualizacao da funçao setInterval do JavaScript.</p>
 
-<p>Fazendo somente isso causaria uma estetica ruim no relogio, aonde se o horario fosse numero com 1 casa (5,6 ou 7) o relogio ficaria com um aspecto ruim, para solucionar esse problema foi criado if's para caso a hora, minuto ou segundo tiver apernas 1 casa decimal acresentar o 0 na frente. </p>
+<p>Fazendo somente isso causaria uma estetica ruim no relogio, aonde se o horario fosse numero com 1 casa do 0 ae 9 o relogio ficaria com um aspecto ruim, para solucionar esse problema foi criado if's para caso a hora, minuto ou segundo tiver apernas 1 casa decimal acresentar o 0 na frente. </p>
 
 <p> 
 
