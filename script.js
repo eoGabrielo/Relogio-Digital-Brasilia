@@ -2,7 +2,7 @@
 setInterval(
   (takeHours = () => {
     const data = new Date();
-    let hours = 19 //data.getHours();
+    let hours = data.getHours();
     let minutes = data.getMinutes();
     let seconds = data.getSeconds();
 
