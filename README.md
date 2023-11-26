@@ -13,17 +13,42 @@ Este projeto em JavaScript apresenta um relógio que exibe o horário atual de B
 ## Detalhes do Código
 
 ```javascript
-if (hours <= 9) { hours = "0" + hours; }
-if (minutes <= 9) { minutes = "0" + minutes; }
-if (seconds <= 9) { seconds = "0" + seconds; }
+setInterval(
+  (takeHours = () => {
+    // Lógica para obtenção e formatação do horário
+    const data = new Date();
+    let hours = data.getHours();
+    let minutes = data.getMinutes();
+    let seconds = data.getSeconds();
 
-if (hours >= 0 && hours <= 12) {
-    wallpaper.src = "ENDEREÇO DA IMG MANHÃ";
-} else if (hours >= 13 && hours <= 18) {
-    wallpaper.src = "ENDEREÇO DA IMG TARDE";
-} else {
-    wallpaper.src = "ENDEREÇO DA IMG NOITE";
-}
+    // Adição de zeros à frente dos dígitos únicos
+    if (hours <= 9) hours = "0" + hours;
+    if (minutes <= 9) minutes = "0" + minutes;
+    if (seconds <= 9) seconds = "0" + seconds;
+
+    // Atualização dinâmica no HTML
+    const hoursHTML = document.querySelector("#hours");
+    hoursHTML.innerHTML = hours;
+
+    const minuteHTML = document.querySelector("#minute");
+    minuteHTML.innerHTML = minutes;
+
+    const secondsHTML = document.querySelector("#seconds");
+    secondsHTML.innerHTML = seconds;
+
+    // Troca de fundo com base na hora do dia
+    const wallpaper = document.querySelector("#imgBack");
+
+    if (hours >= 0 && hours <= 12) {
+      wallpaper.src = "URL_IMG_MANHA";
+    } else if (hours >= 13 && hours <= 18) {
+      wallpaper.src = "URL_IMG_TARDE";
+    } else {
+      wallpaper.src = "URL_IMG_NOITE";
+    }
+  }),
+  "1000" // Intervalo de 1000ms (1 segundo)
+);
 ```
 
 ## Instruções de Uso
