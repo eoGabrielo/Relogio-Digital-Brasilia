@@ -1,43 +1,43 @@
+# Relógio com Horário de Brasília
 
-<h2> Desenvolvido em JavaScript: Relogio com horario de brasilia </h2>
+Este projeto em JavaScript oferece um relógio que exibe o horário atual de Brasília, sendo atualizado a cada segundo para garantir precisão. A estética do relógio é aprimorada com a adição de zeros às horas, minutos e segundos quando possuem apenas uma casa decimal.
 
-<p>No código do projeto foi usado uma função nativa do JavaScript que executa algo em tempo, sabendo disso usei essa função para pegar uma nova data e pegar as horas dela, após ter o código atualizando a cada um segundo, foi atribuído as horas, minutos e segundos para cada variável, tendo as horas atualizadas a cada atualização da função setInterval do JavaScript.</p>
+## Funcionalidades
 
-<p>Fazendo somente isso causaria uma estética ruim no relógio, aonde se o horário fosse numero com 1 casa do 0 ao 9 o relógio ficaria com um aspecto ruim, para solucionar esse problema foi criado if's para caso a hora, minuto ou segundo tiver apernas 1 casa decimal acrescentar o 0 na frente. </p>
+- **Atualização Dinâmica:** Utiliza a função nativa `setInterval` para atualizar o horário a cada segundo, mantendo-o sempre preciso.
 
-<p> 
+- **Estética Aperfeiçoada:** Condições são aplicadas para adicionar zeros à frente de horas, minutos e segundos, assegurando uma apresentação visual consistente.
 
-if (hours <= 9) {
-      hours = "0" + hours;
-    }
+- **Imagem de Fundo Dinâmica:** O contêiner principal possui uma imagem de fundo que muda com base na hora do dia (manhã, tarde, noite), proporcionando uma experiência visual envolvente.
 
-</p>
+## Detalhes do Código
 
-<p> 
+```javascript
+if (hours <= 9) { hours = "0" + hours; }
+if (minutes <= 9) { minutes = "0" + minutes; }
+if (seconds <= 9) { seconds = "0" + seconds; }
+```
 
- if (minutes <= 9) {
-      minutes = "0" + minutes;
-    }
+```javascript
+if (hours >= 0 && hours <= 12) {
+    wallpaper.src = "ENDEREÇO DA IMG MANHÃ";
+} else if (hours >= 13 && hours <= 18) {
+    wallpaper.src = "ENDEREÇO DA IMG TARDE";
+} else {
+    wallpaper.src = "ENDEREÇO DA IMG NOITE";
+}
+```
 
-</p>
+## Instruções de Uso
 
-<p> 
+1. Clone ou baixe os arquivos do projeto.
+2. Abra o arquivo HTML em seu navegador.
 
- if (seconds <= 9) {
-      seconds = "0" + seconds;
-    }
+**Observação:** Certifique-se de ter as imagens necessárias (manha.png, tarde.png, noite.png) no mesmo diretório do seu arquivo HTML.
 
-</p>
-
-<p>Para um aspecto melhor no contêiner principal foi adicionado uma img de fundo com position: absolute; para ficar dentro do contêiner centralizado e um z-index: -1; para ficar abaixo dos itens no contêiner, foi feito dessa forma para conseguir mudar o valor do src da tag img para cada hora do dia, das 00 as 12 manhã, das 13 as 18 tarde e entre as 18 as 23:59 noite.  </p>
-
-<p> 
-
-if (hours >= 0 && hours <= 12) { <br>
-        wallpaper.src = "ENDEREÇO DA IMG"; <br>
-    } else if (hours >= 13 && hours <= 18) { <br>
-        wallpaper.src = "ENDEREÇO DA IMG"; <br>
-    } else { <br>
-      wallpaper.src = "ENDEREÇO DA IMG"; <br>
-    }
-</p>
+```html
+<html>
+  <!-- Seu código HTML aqui -->
+  <script src="seu-arquivo-js.js"></script>
+</html>
+```
