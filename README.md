@@ -27,17 +27,3 @@ if (hours >= 0 && hours <= 12) {
     wallpaper.src = "ENDEREÇO DA IMG NOITE";
 }
 ```
-
-## Instruções de Uso
-
-1. Clone ou baixe os arquivos do projeto.
-2. Abra o arquivo HTML em seu navegador.
-
-**Observação:** Certifique-se de ter as imagens necessárias (manha.png, tarde.png, noite.png) no mesmo diretório do seu arquivo HTML.
-
-```html
-<html>
-  <!-- Seu código HTML aqui -->
-  <script src="seu-arquivo-js.js"></script>
-</html>
-```
